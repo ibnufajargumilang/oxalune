@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OXALUNE SALE</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        * {
+            font-family: "Outfit", serif;
+        }
+
+        body {
+            margin-top: 20px;
+            background-color: #1a202c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card {
+            color: white;
+            background-color: #2d3748;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #3182ce, #63b3ed);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 4px solid #3182ce;
+        }
+
+        .card-body {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .card-footer {
+            background-color: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 10px;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3182ce, #63b3ed);
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #63b3ed, #3182ce);
+            transform: scale(1.05);
+        }
+
+        .nav-pills .nav-link {
+            background-color: #4a5568;
+            color: white;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #3182ce;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center mb-5">
+        <h3>OXALUNE</h3>
+        <div class="mb-4">All products are subject to applicable terms and conditions to qualify for promotions and discount.</div>
+
+        <!-- Nav Tabs -->
+        <ul class="nav nav-pills justify-content-center mb-4 gap-2" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="pills-webhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-webhosting" type="button" role="tab" aria-controls="pills-webhosting" aria-selected="true">Web Hosting</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cloudhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-cloudhosting" type="button" role="tab" aria-controls="pills-cloudhosting" aria-selected="false">Cloud Hosting</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-wphosting-tab" data-bs-toggle="pill" data-bs-target="#pills-wphosting" type="button" role="tab" aria-controls="pills-wphosting" aria-selected="false">WordPress Hosting</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-emailhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-emailhosting" type="button" role="tab" aria-controls="pills-emailhosting" aria-selected="false">Email Hosting</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-cloudvps-tab" data-bs-toggle="pill" data-bs-target="#pills-cloudvps" type="button" role="tab" aria-controls="pills-cloudvps" aria-selected="false">Cloud VPS</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-webbuilder-tab" data-bs-toggle="pill" data-bs-target="#pills-webbuilder" type="button" role="tab" aria-controls="pills-webbuilder" aria-selected="false">Web Builder</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-scunity-tab" data-bs-toggle="pill" data-bs-target="#pills-scunity" type="button" role="tab" aria-controls="pills-scunity" aria-selected="false">SC Unity</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-donate-tab" data-bs-toggle="pill" data-bs-target="#pills-donate" type="button" role="tab" aria-controls="pills-donate" aria-selected="false">Support Us</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content text-start" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-webhosting" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-webhosting">
+                    <!-- Produk Web Hosting akan dimuat di sini -->
+                </div>
+            </div>
+
+            <!-- Tab Cloud Hosting -->
+            <div class="tab-pane fade" id="pills-cloudhosting" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-cloudhosting">
+                    <!-- Produk Cloud Hosting akan dimuat di sini -->
+                </div>
+            </div>
+
+            <!-- Tab WP Hosting -->
+            <div class="tab-pane fade" id="pills-wphosting" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-wphosting">
+                    <!-- Produk WP Hosting akan dimuat di sini -->
+                </div>
+            </div>
+
+            <!-- Tab Email Hosting -->
+            <div class="tab-pane fade" id="pills-emailhosting" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-emailhosting">
+                    <!-- Produk Email Hosting akan dimuat di sini -->
+                </div>
+            </div>
+
+            <!-- Tab Cloud VPS -->
+            <div class="tab-pane fade" id="pills-cloudvps" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-cloudvps">
+                    <!-- Produk Cloud VPS akan dimuat di sini -->
+                </div>
+            </div>
+
+            <!-- Tab Web Builder -->
+            <div class="tab-pane fade" id="pills-webbuilder" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-webbuilder">
+                    <!-- Produk Cloud VPS akan dimuat di sini -->
+                </div>
+            </div>
+
+            <!-- Tab Web Builder -->
+            <div class="tab-pane fade" id="pills-scunity" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-scunity">
+                    <!-- Produk Cloud VPS akan dimuat di sini -->
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="pills-donate" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-5 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="https://www.paypal.com/paypalme/oxalune" target="_blank"><img src="https://static.cdnlogo.com/logos/p/23/paypal-thumb.png" class="card-img-top" alt="PayPal"></a>
+                            <div class="card-footer">*International</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://cdn6.aptoide.com/imgs/b/a/8/ba8c900c1212100bab1cc9b14b9693bd_icon.png" class="card-img-top" alt="Payeer" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#backdropPayeer">
+                            <div class="card-footer">*International</div>
+                        </div>
+                        <div class="modal fade" id="backdropPayeer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Payeer for Support Us</h1>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <h6>Account No.</h6>
+                                        <h5>P1024795557</h5>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="https://trakteer.id/oxalune" target="_blank"><img src="https://shorturl.at/CNns7" class="card-img-top" alt="Shortlink"></a>
+                            <div class="card-footer">*Indonesian</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://images.seeklogo.com/logo-png/39/1/quick-response-code-indonesia-standard-qris-logo-png_seeklogo-391791.png" class="card-img-top" alt="QRIS" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#backdropQRIS">
+                            <div class="card-footer">*Indonesian</div>
+                        </div>
+                        <div class="modal fade" id="backdropQRIS" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Scan QRIS for Support Us</h1>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="https://shorturl.at/7EWnc" alt="QRIS">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://i.pinimg.com/736x/66/4c/c8/664cc8888b4f3040482a5fb093d165db.jpg" class="card-img-top" alt="Crypto" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#backdropCrypto">
+                            <div class="card-footer">*International</div>
+                        </div>
+                        <div class="modal fade" id="backdropCrypto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content bg-dark">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Payeer for Support Us</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item text-bg-dark">
+                                                <div class="fw-bold mb-2"><i class="bi bi-coin"></i> Bitcoin (Bitcoin Network)</div>
+                                                <div class="text-warning">bc1q8awrlumaneuslh3x06ce2aswhhe2lgs8vs56rl</div>
+                                            </li>
+                                            <li class="list-group-item text-bg-dark">
+                                                <div class="fw-bold mb-2"><i class="bi bi-coin"></i> Bitcoin Cash (Bitcoin Cash Network)</div>
+                                                <div class="text-warning">bitcoincash:qql4c0ln0k08jr77yeltr9tkp67l9tazqusfrpym9n</div>
+                                            </li>
+                                            <li class="list-group-item text-bg-dark">
+                                                <div class="fw-bold mb-2"><i class="bi bi-coin"></i> Dogecoin (Dogecoin Network)</div>
+                                                <div class="text-warning">DAv7cyNxjeBDChYJfPcuzCfEBZdrddbsmt</div>
+                                            </li>
+                                            <li class="list-group-item text-bg-dark">
+                                                <div class="fw-bold mb-2"><i class="bi bi-coin"></i> Litecoin (Litecoin Network)</div>
+                                                <div class="text-warning">ltc1q8awrlumaneuslh3x06ce2aswhhe2lgs8gvw7m0</div>
+                                            </li>
+                                            <li class="list-group-item text-bg-dark">
+                                                <div class="fw-bold mb-2"><i class="bi bi-coin"></i> Tron (TRC20 Network)</div>
+                                                <div class="text-warning">TBzJNm6HSmrMkwPLpJqZMcXqwu1Qd2asxW</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="https://exe.io/oxalune" target="_blank"><img src="https://exe.io/img/og-image.png" class="card-img-top" alt="Shortlink"></a>
+                            <div class="card-footer">*Complete for Support</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="https://cuty.io/oxalune" target="_blank"><img src="https://cdn.cuty.io/images/public/og-image.png" class="card-img-top" alt="Shortlink"></a>
+                            <div class="card-footer">*Complete for Support</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="https://tpi.li/oxalune" target="_blank"><img src="https://play-lh.googleusercontent.com/YGahPmt9vCPTwp6XMMD1O1fvYGfOB3gHrhIh2kQfkqa_WwTYQ0tbAdtWgJmlEKziSi8" class="card-img-top" alt="Shortlink"></a>
+                            <div class="card-footer">*Complete for Support</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="http://shrinkme.ink/oxalune" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt77pfSD0ZuCJvu_dH8NQfNZ3v8viG0xMicQ&s" class="card-img-top" alt="Shortlink"></a>
+                            <div class="card-footer">*Complete for Support</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="https://ouo.io/hjR5Sx" target="_blank"><img src="https://m.media-amazon.com/images/I/617nhPmUb5L.png" class="card-img-top" alt="Shortlink"></a>
+                            <div class="card-footer">*Complete for Support</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const SHEET_URL = "https://script.google.com/macros/s/AKfycbxIkmLysVXjlWLwP3RlzSLrXHrBpgHwfRmg5cVFwGdu1maQf7VJHSlsLyGHwHuKLUYS/exec";
+
+        // Fungsi format Rupiah tanpa angka di belakang koma
+        function formatRupiah(angka) {
+            return Math.round(parseFloat(angka)).toLocaleString('id-ID'); // Hilangkan desimal
+        }
+
+        async function fetchProduk() {
+            try {
+                // console.log("🔄 Mengambil data dari:", SHEET_URL);
+
+                // Ambil data dari Google Apps Script
+                const response = await fetch(SHEET_URL);
+
+                // Periksa apakah respons sukses (status 200)
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                // console.log("✅ Data yang diterima:", data); // Debug: Lihat hasil di Console
+
+                // Pastikan data berbentuk array
+                // if (!Array.isArray(data)) {
+                //     throw new Error("⚠️ Format data tidak sesuai! Harus berupa array.");
+                // }
+
+                // Ambil container kategori
+                const containerWebHosting = document.getElementById("produk-container-webhosting");
+                const containerCloudHosting = document.getElementById("produk-container-cloudhosting");
+                const containerWpHosting = document.getElementById("produk-container-wphosting");
+                const containerCloudVps = document.getElementById("produk-container-cloudvps");
+                const containerEmailHosting = document.getElementById("produk-container-emailhosting");
+                const containerWebBuilder = document.getElementById("produk-container-webbuilder");
+                const containerScUnity = document.getElementById("produk-container-scunity");
+
+                // Kosongkan kontainer sebelum menambahkan data baru
+                containerWebHosting.innerHTML = "";
+                containerCloudHosting.innerHTML = "";
+                containerWpHosting.innerHTML = "";
+                containerCloudVps.innerHTML = "";
+                containerEmailHosting.innerHTML = "";
+                containerWebBuilder.innerHTML = "";
+                containerScUnity.innerHTML = "";
+
+
+                data.forEach((item) => {
+                    // if (!item.nama || !item.gambar || !item.currency || !item.hargaAsli || !item.hargaDiskon || !item.typeItem || !item.link || !item.discount || !item.kategori) {
+                    //     console.warn("⚠️ Data produk tidak lengkap:", item);
+                    //     return; // Lewati item yang tidak lengkap
+                    // }
+
+                    // 🔥 Tentukan harga berdasarkan `typeItem`
+                    let hargaHTML = "";
+                    if (item.typeItem.toLowerCase() === "promo") {
+                        hargaHTML = `${item.currency}${formatRupiah(item.hargaDiskon)} <sub class="fw-normal text-decoration-line-through text-light">${item.currency}${formatRupiah(item.hargaAsli)}</sub>`;
+                        cardfHTML = `${item.currency}${formatRupiah(item.discount || 0)}`;
+                    } else if (item.typeItem.toLowerCase() === "free") {
+                        hargaHTML = `Free <sub class="fw-normal text-decoration-line-through text-light">${item.currency}${formatRupiah(item.hargaAsli)}</sub>`;
+                        cardfHTML = `${item.currency}${formatRupiah(item.hargaAsli)}`;
+                    } else if (item.typeItem.toLowerCase() === "normal") {
+                        hargaHTML = `${item.currency}${formatRupiah(item.hargaAsli)}`;
+                        cardfHTML = `${item.currency}0`;
+                    } else {
+                        hargaHTML = `Not Content`;
+                        cardfHTML = `Not Content`;
+                    }
+
+                    // 🔥 Buat card produk
+                    const card = document.createElement("div");
+                    card.classList.add("col");
+                    card.innerHTML = `
+                        <div class="card">
+                            <div class="card-header text-light" style="max-width: 100%; white-space: nowrap; overflow: hidden;" title="${item.nama}">
+                                <h6 class="mb-0 text-truncate">${item.nama}</h6>
+                            </div>
+                            <img src="${item.gambar}" alt="Produk" onerror="this.onerror=null; this.src='https://via.placeholder.com/200';">
+                            <div class="card-body">
+                                <h5 class="text-warning fw-bold d-inline">${hargaHTML}</h5>
+                                <a href="${item.link}" target="_blank" class="btn btn-primary w-100 my-2">Lihat Produk</a>
+                            </div>
+                            <div class="card-footer">
+                                <i class="bi bi-wallet2 me-2"></i>Save Up to <div class="text-light">${cardfHTML}</div>
+                            </div>
+                        </div>
+                    `;
+
+                    // Masukkan ke kategori yang sesuai
+                    if (item.kategori.toLowerCase() === "web hosting") {
+                        containerWebHosting.appendChild(card);
+                    } else if (item.kategori.toLowerCase() === "cloud hosting") {
+                        containerCloudHosting.appendChild(card);
+                    } else if (item.kategori.toLowerCase() === "wordpress hosting") {
+                        containerWpHosting.appendChild(card);
+                    } else if (item.kategori.toLowerCase() === "cloud vps") {
+                        containerCloudVps.appendChild(card);
+                    } else if (item.kategori.toLowerCase() === "email hosting") {
+                        containerEmailHosting.appendChild(card);
+                    } else if (item.kategori.toLowerCase() === "web builder") {
+                        containerWebBuilder.appendChild(card);
+                    } else if (item.kategori.toLowerCase() === "sc unity") {
+                        containerScUnity.appendChild(card);
+                    } else {
+                        console.warn("❓ Kategori tidak dikenal:", item.kategori);
+                    }
+                });
+
+                // console.log("✅ Produk berhasil ditampilkan!");
+
+            } catch (error) {
+                console.error("❌ Error saat mengambil data:", error);
+            }
+        }
+
+        // Panggil fungsi setelah halaman selesai dimuat
+        document.addEventListener("DOMContentLoaded", fetchProduk);
+    </script>
+
+</body>
+
+</html>

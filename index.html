@@ -29,6 +29,10 @@
             flex-direction: column;
         }
 
+        .bg-edark {
+            background-color: #1a202c;
+        }
+
         .card {
             color: white;
             background-color: #2d3748;
@@ -94,90 +98,122 @@
 </head>
 
 <body>
-    <div class="container text-center mb-5">
-        <h3>OXALUNE</h3>
-        <div class="mb-4">All products are subject to applicable terms and conditions to qualify for promotions and discount.</div>
+    <div class="container-fluid text-center mb-5">
+        <div class="container d-flex justify-content-between sticky-top py-2 bg-edark">
+            <h3>OXALUNE</h3>
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Show Category</button>
+        </div>
+        <div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Category List</h5>
+                <button type="button" class="btn-close bg-body-tertiary btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body py-0">
+                <!-- Nav Tabs -->
+                <ul class="nav nav-pills justify-content-center gap-2 bg-dark" id="pills-tab" role="tablist">
+                    <div class="sticky-top d-flex justify-content-center gap-2 bg-dark w-100 p-2">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-bg-warning" id="pills-freeforyou-tab" data-bs-toggle="pill" data-bs-target="#pills-freeforyou" type="button" role="tab" aria-controls="pills-freeforyou" aria-selected="false"><i class="bi bi-star"></i> Free For You</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-bg-primary" id="pills-donate-tab" data-bs-toggle="pill" data-bs-target="#pills-donate" type="button" role="tab" aria-controls="pills-donate" aria-selected="false"><i class="bi bi-gift"></i> Support Us</button>
+                        </li>
+                    </div>
 
-        <!-- Nav Tabs -->
-        <ul class="nav nav-pills justify-content-center mb-4 gap-2" id="pills-tab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-webhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-webhosting" type="button" role="tab" aria-controls="pills-webhosting" aria-selected="true">Web Hosting</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-cloudhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-cloudhosting" type="button" role="tab" aria-controls="pills-cloudhosting" aria-selected="false">Cloud Hosting</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-wphosting-tab" data-bs-toggle="pill" data-bs-target="#pills-wphosting" type="button" role="tab" aria-controls="pills-wphosting" aria-selected="false">WordPress Hosting</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-emailhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-emailhosting" type="button" role="tab" aria-controls="pills-emailhosting" aria-selected="false">Email Hosting</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-cloudvps-tab" data-bs-toggle="pill" data-bs-target="#pills-cloudvps" type="button" role="tab" aria-controls="pills-cloudvps" aria-selected="false">Cloud VPS</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-webbuilder-tab" data-bs-toggle="pill" data-bs-target="#pills-webbuilder" type="button" role="tab" aria-controls="pills-webbuilder" aria-selected="false">Web Builder</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-scunity-tab" data-bs-toggle="pill" data-bs-target="#pills-scunity" type="button" role="tab" aria-controls="pills-scunity" aria-selected="false">SC Unity</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-donate-tab" data-bs-toggle="pill" data-bs-target="#pills-donate" type="button" role="tab" aria-controls="pills-donate" aria-selected="false">Support Us</button>
-            </li>
-        </ul>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-cloudhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-cloudhosting" type="button" role="tab" aria-controls="pills-cloudhosting" aria-selected="false">Cloud Hosting</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-cloudvps-tab" data-bs-toggle="pill" data-bs-target="#pills-cloudvps" type="button" role="tab" aria-controls="pills-cloudvps" aria-selected="false">Cloud VPS</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-emailhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-emailhosting" type="button" role="tab" aria-controls="pills-emailhosting" aria-selected="false">Email Hosting</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-murottal-tab" data-bs-toggle="pill" data-bs-target="#pills-murottal" type="button" role="tab" aria-controls="pills-murottal" aria-selected="false">Murottal</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-scunity-tab" data-bs-toggle="pill" data-bs-target="#pills-scunity" type="button" role="tab" aria-controls="pills-scunity" aria-selected="false">SC Unity</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-webbuilder-tab" data-bs-toggle="pill" data-bs-target="#pills-webbuilder" type="button" role="tab" aria-controls="pills-webbuilder" aria-selected="false">Web Builder</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-webhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-webhosting" type="button" role="tab" aria-controls="pills-webhosting" aria-selected="true">Web Hosting</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-wphosting-tab" data-bs-toggle="pill" data-bs-target="#pills-wphosting" type="button" role="tab" aria-controls="pills-wphosting" aria-selected="false">WordPress Hosting</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="my-3">All products are subject to applicable terms and conditions to qualify for promotions and discount.</div>
 
         <!-- Tab Content -->
-        <div class="tab-content text-start" id="pills-tabContent">
+        <div class="container tab-content text-start" id="pills-tabContent">
+            <div class="tab-pane fade show" id="pills-freeforyou" role="tabpanel">
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-freeforyou">
+                    <!-- Produk Web Hosting akan dimuat di sini -->
+                </div>
+            </div>
+
             <div class="tab-pane fade show active" id="pills-webhosting" role="tabpanel">
-                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-webhosting">
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-webhosting">
                     <!-- Produk Web Hosting akan dimuat di sini -->
                 </div>
             </div>
 
             <!-- Tab Cloud Hosting -->
             <div class="tab-pane fade" id="pills-cloudhosting" role="tabpanel">
-                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-cloudhosting">
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-cloudhosting">
                     <!-- Produk Cloud Hosting akan dimuat di sini -->
                 </div>
             </div>
 
             <!-- Tab WP Hosting -->
             <div class="tab-pane fade" id="pills-wphosting" role="tabpanel">
-                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-wphosting">
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-wphosting">
                     <!-- Produk WP Hosting akan dimuat di sini -->
                 </div>
             </div>
 
             <!-- Tab Email Hosting -->
             <div class="tab-pane fade" id="pills-emailhosting" role="tabpanel">
-                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-emailhosting">
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-emailhosting">
                     <!-- Produk Email Hosting akan dimuat di sini -->
                 </div>
             </div>
 
             <!-- Tab Cloud VPS -->
             <div class="tab-pane fade" id="pills-cloudvps" role="tabpanel">
-                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-cloudvps">
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-cloudvps">
                     <!-- Produk Cloud VPS akan dimuat di sini -->
                 </div>
             </div>
 
             <!-- Tab Web Builder -->
             <div class="tab-pane fade" id="pills-webbuilder" role="tabpanel">
-                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-webbuilder">
-                    <!-- Produk Cloud VPS akan dimuat di sini -->
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-webbuilder">
+                    <!-- Produk Web Builder akan dimuat di sini -->
                 </div>
             </div>
 
-            <!-- Tab Web Builder -->
+            <!-- Tab SC Unity -->
             <div class="tab-pane fade" id="pills-scunity" role="tabpanel">
-                <div class="row row-cols-1 row-cols-md-4 g-4" id="produk-container-scunity">
-                    <!-- Produk Cloud VPS akan dimuat di sini -->
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-scunity">
+                    <!-- Produk SC Unity akan dimuat di sini -->
+                </div>
+            </div>
+
+            <!-- Tab Murottal -->
+            <div class="tab-pane fade" id="pills-murottal" role="tabpanel">
+                <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-murottal">
+                    <!-- Produk Murottal akan dimuat di sini -->
                 </div>
             </div>
 
             <div class="tab-pane fade" id="pills-donate" role="tabpanel">
-                <div class="row row-cols-1 row-cols-md-5 g-4">
+                <div class="row row-cols-2 row-cols-md-5 g-4">
                     <div class="col">
                         <div class="card h-100">
                             <a href="https://www.paypal.com/paypalme/oxalune" target="_blank"><img src="https://static.cdnlogo.com/logos/p/23/paypal-thumb.png" class="card-img-top" alt="PayPal"></a>
@@ -208,7 +244,7 @@
                     </div>
                     <div class="col">
                         <div class="card h-100">
-                            <a href="https://trakteer.id/oxalune" target="_blank"><img src="https://shorturl.at/CNns7" class="card-img-top" alt="Shortlink"></a>
+                            <a href="https://trakteer.id/oxalune/tip" target="_blank"><img src="https://shorturl.at/CNns7" class="card-img-top" alt="Shortlink"></a>
                             <div class="card-footer">*Indonesian</div>
                         </div>
                     </div>
@@ -309,6 +345,19 @@
 
             </div>
         </div>
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <span class="mb-3 mb-md-0 text-body-dark">© Creation by Oxalune</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-body-dark" href="#"><i class="bi bi-facebook fs-5 text-light"></i></a></li>
+                    <li class="ms-3"><a class="text-body-dark" href="#"><i class="bi bi-instagram fs-5 text-light"></i></a></li>
+                    <li class="ms-3"><a class="text-body-dark" href="#"><i class="bi bi-threads fs-5 text-light"></i></a></li>
+                </ul>
+            </footer>
+        </div>
     </div>
 
     <!-- Bootstrap JS -->
@@ -350,6 +399,7 @@
                 const containerEmailHosting = document.getElementById("produk-container-emailhosting");
                 const containerWebBuilder = document.getElementById("produk-container-webbuilder");
                 const containerScUnity = document.getElementById("produk-container-scunity");
+                const containerMurottal = document.getElementById("produk-container-murottal");
 
                 // Kosongkan kontainer sebelum menambahkan data baru
                 containerWebHosting.innerHTML = "";
@@ -359,6 +409,7 @@
                 containerEmailHosting.innerHTML = "";
                 containerWebBuilder.innerHTML = "";
                 containerScUnity.innerHTML = "";
+                containerMurottal.innerHTML = "";
 
 
                 data.forEach((item) => {
@@ -417,6 +468,8 @@
                         containerWebBuilder.appendChild(card);
                     } else if (item.kategori.toLowerCase() === "sc unity") {
                         containerScUnity.appendChild(card);
+                    } else if (item.kategori.toLowerCase() === "murottal") {
+                        containerMurottal.appendChild(card);
                     } else {
                         console.warn("❓ Kategori tidak dikenal:", item.kategori);
                     }

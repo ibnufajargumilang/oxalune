@@ -113,10 +113,13 @@
                 <ul class="nav nav-pills justify-content-center gap-2 bg-dark" id="pills-tab" role="tablist">
                     <div class="sticky-top d-flex justify-content-center gap-2 bg-dark w-100 p-2">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link text-bg-warning" id="pills-freeforyou-tab" data-bs-toggle="pill" data-bs-target="#pills-freeforyou" type="button" role="tab" aria-controls="pills-freeforyou" aria-selected="false"><i class="bi bi-star"></i> Free For You</button>
+                            <button class="nav-link text-bg-warning active" id="pills-freeforyou-tab" data-bs-toggle="pill" data-bs-target="#pills-freeforyou" type="button" role="tab" aria-controls="pills-freeforyou" aria-selected="false"><i class="bi bi-star"></i> Free</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link text-bg-primary" id="pills-donate-tab" data-bs-toggle="pill" data-bs-target="#pills-donate" type="button" role="tab" aria-controls="pills-donate" aria-selected="false"><i class="bi bi-gift"></i> Support Us</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-bg-secondary" id="pills-log-tab" data-bs-toggle="pill" data-bs-target="#pills-log" type="button" role="tab" aria-controls="pills-log" aria-selected="false"><i class="bi bi-database-fill-gear"></i> Log</button>
                         </li>
                     </div>
 
@@ -139,7 +142,7 @@
                         <button class="nav-link" id="pills-webbuilder-tab" data-bs-toggle="pill" data-bs-target="#pills-webbuilder" type="button" role="tab" aria-controls="pills-webbuilder" aria-selected="false">Web Builder</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-webhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-webhosting" type="button" role="tab" aria-controls="pills-webhosting" aria-selected="true">Web Hosting</button>
+                        <button class="nav-link" id="pills-webhosting-tab" data-bs-toggle="pill" data-bs-target="#pills-webhosting" type="button" role="tab" aria-controls="pills-webhosting" aria-selected="true">Web Hosting</button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="pills-wphosting-tab" data-bs-toggle="pill" data-bs-target="#pills-wphosting" type="button" role="tab" aria-controls="pills-wphosting" aria-selected="false">WordPress Hosting</button>
@@ -151,13 +154,20 @@
 
         <!-- Tab Content -->
         <div class="container tab-content text-start" id="pills-tabContent">
-            <div class="tab-pane fade show" id="pills-freeforyou" role="tabpanel">
+            <!-- Tab Free For You Hosting -->
+            <div class="tab-pane fade show active" id="pills-freeforyou" role="tabpanel">
                 <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-freeforyou">
                     <!-- Produk Web Hosting akan dimuat di sini -->
                 </div>
             </div>
 
-            <div class="tab-pane fade show active" id="pills-webhosting" role="tabpanel">
+            <!-- Tab Free For You Hosting -->
+            <div class="tab-pane fade" id="pills-log" role="tabpanel">
+                <h1 class="text-center">This update log is coming soon.</h1>
+            </div>
+
+            <!-- Tab Web Hosting -->
+            <div class="tab-pane fade" id="pills-webhosting" role="tabpanel">
                 <div class="row row-cols-2 row-cols-md-4 g-4" id="produk-container-webhosting">
                     <!-- Produk Web Hosting akan dimuat di sini -->
                 </div>
@@ -244,7 +254,7 @@
                     </div>
                     <div class="col">
                         <div class="card h-100">
-                            <a href="https://trakteer.id/oxalune/tip" target="_blank"><img src="https://shorturl.at/CNns7" class="card-img-top" alt="Shortlink"></a>
+                            <a href="https://trakteer.id/oxalune/tip" target="_blank"><img src="https://play-lh.googleusercontent.com/OYaEM1pE7YfjqogMH-2G_6h4yNCVB306SCgctXCsMwzPUTAn_69VA_tKb2QbpiDzv5w" class="card-img-top" alt="Shortlink"></a>
                             <div class="card-footer">*Indonesian</div>
                         </div>
                     </div>
@@ -392,6 +402,7 @@
                 // }
 
                 // Ambil container kategori
+                const containerFreeForYou = document.getElementById("produk-container-freeforyou");
                 const containerWebHosting = document.getElementById("produk-container-webhosting");
                 const containerCloudHosting = document.getElementById("produk-container-cloudhosting");
                 const containerWpHosting = document.getElementById("produk-container-wphosting");
@@ -402,6 +413,7 @@
                 const containerMurottal = document.getElementById("produk-container-murottal");
 
                 // Kosongkan kontainer sebelum menambahkan data baru
+                containerFreeForYou.innerHTML = "";
                 containerWebHosting.innerHTML = "";
                 containerCloudHosting.innerHTML = "";
                 containerWpHosting.innerHTML = "";
@@ -454,7 +466,9 @@
                     `;
 
                     // Masukkan ke kategori yang sesuai
-                    if (item.kategori.toLowerCase() === "web hosting") {
+                    if (item.kategori.toLowerCase() === "free for you") {
+                        containerFreeForYou.appendChild(card);
+                    } else if (item.kategori.toLowerCase() === "web hosting") {
                         containerWebHosting.appendChild(card);
                     } else if (item.kategori.toLowerCase() === "cloud hosting") {
                         containerCloudHosting.appendChild(card);
@@ -486,6 +500,12 @@
         document.addEventListener("DOMContentLoaded", fetchProduk);
     </script>
 
+    <script type="text/javascript">
+        var go_url = 'https://sfl.gl/';
+        var api = '07b3ae3eb7bcd28eaa9cac5b4a1fb6975af4fe2a';
+        var shorten_includ = ["oxalune.web.id"];
+    </script>
+    <script src="//safelinku.com/js/web-script.js"></script>
 </body>
 
 </html>
